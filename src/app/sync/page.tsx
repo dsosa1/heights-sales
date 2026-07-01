@@ -46,9 +46,7 @@ export default async function SyncPage() {
                   {run.status}
                 </td>
                 <td className="px-4 py-3 text-right">{run.recordsSynced}</td>
-                <td className="max-w-xs truncate px-4 py-3 text-red-600" title={run.error ?? undefined}>
-                  {run.error ?? ""}
-                </td>
+                <td className="max-w-md whitespace-pre-wrap break-all px-4 py-3 text-red-600">{run.error ?? ""}</td>
               </tr>
             ))}
           </tbody>
