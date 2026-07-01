@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: heights
+      POSTGRES_PASSWORD: heights
+      POSTGRES_DB: heights_sales
+    ports:
+      - "5432:5432"
+    volumes:
+      - heights_sales_pg:/var/lib/postgresql/data
+
+volumes:
+  heights_sales_pg:
